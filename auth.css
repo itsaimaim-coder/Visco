@@ -1,0 +1,71 @@
+.auth-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.auth-main {
+  display: grid;
+  flex: 1;
+  place-items: center;
+  padding: clamp(2rem, 6vw, 5rem) var(--page-pad);
+}
+
+.auth-card {
+  width: min(100%, 440px);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-l);
+  background:
+    linear-gradient(150deg, rgba(255, 244, 226, 0.055), transparent 46%),
+    var(--surface);
+  box-shadow: 0 30px 70px -35px rgba(0, 0, 0, 0.95);
+}
+
+.auth-card h1 {
+  margin-bottom: 0.85rem;
+  font-size: clamp(2.15rem, 5vw, 3.1rem);
+}
+
+.auth-lead {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.auth-card form {
+  margin-top: 1.7rem;
+}
+
+.auth-card .field {
+  margin-bottom: 0.95rem;
+}
+
+.auth-submit {
+  width: 100%;
+  margin-top: 0.3rem;
+}
+
+.auth-note {
+  margin-top: 1.6rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 520px) {
+  .auth-main {
+    align-items: start;
+    padding-top: 2rem;
+  }
+
+  .auth-card {
+    padding: 1.3rem;
+  }
+
+  .site-header--minimal .text-link {
+    font-size: 0.82rem;
+  }
+}

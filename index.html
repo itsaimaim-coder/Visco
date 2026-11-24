@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visco Vidatra, ruang aspirasi siswa</title>
+  <meta name="description" content="Tulis kritik, saran, atau ide untuk sekolah. Surat masuk ke kotak aspirasi digital Visco Vidatra dan hanya dibaca pengurus.">
+  <meta name="theme-color" content="#0b0a09">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Visco Vidatra, ruang aspirasi siswa">
+  <meta property="og:description" content="Tulis kritik, saran, atau ide untuk sekolah. Surat masuk ke kotak aspirasi digital Visco Vidatra dan hanya dibaca pengurus.">
+  <meta property="og:image" content="/assets/portrait.png">
+  <link rel="icon" href="/assets/portrait.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/base.css?v=20261119b">
+  <link rel="stylesheet" href="/css/landing.css?v=20261119b">
+</head>
+<body>
+  <a class="skip-link" href="#main">Lewati ke konten</a>
+
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Visco Vidatra, beranda">
+      <img src="/assets/portrait.png" alt="" width="44" height="44">
+      <span>Visco Vidatra</span>
+    </a>
+    <nav class="site-nav" aria-label="Navigasi utama">
+      <a href="#kotak">Kotak aspirasi</a>
+      <a href="#kartu">Kartu</a>
+      <a class="nav-login" href="/masuk">Masuk pengurus</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="hero-kicker">Ruang aspirasi OSIS</p>
+        <h1 id="hero-title">Aspirasi siswa, sampai ke meja pengurus.</h1>
+        <p class="hero-lead">Tulis kritik, saran, atau ide untuk sekolah. Suratmu masuk ke kotak digital dan hanya dibuka oleh pengurus.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#kotak">Tulis aspirasi</a>
+          <a class="button button-quiet" href="#kartu">Lihat kartu pengenal</a>
+        </div>
+        <p class="hero-note">Tidak perlu akun. Nama dan kelas boleh dikosongkan.</p>
+      </div>
+
+      <div class="hero-object" id="kartu">
+        <div class="card-stage" data-card-stage aria-hidden="true">
+          <canvas id="lanyard"></canvas>
+          <div class="id-card" id="id-card">
+            <div class="id-card-flip" id="id-card-flip">
+              <div class="id-face id-front">
+                <div class="id-photo">
+                  <img src="/assets/portrait.png" alt="" width="1080" height="1080" fetchpriority="high">
+                </div>
+                <div class="id-meta">
+                  <span class="id-name">VISCO</span>
+                  <span class="id-role">Vidatra Student Council</span>
+                </div>
+                <span class="id-shine"></span>
+              </div>
+              <div class="id-face id-back">
+                <span class="id-back-mark">VISCO</span>
+                <span class="id-back-slogan">Kartu pengenal</span>
+                <span class="id-qr">
+                  <img src="/assets/instagram-qr.svg" alt="Kode QR Instagram @visco_thebest" width="150" height="150">
+                </span>
+                <span class="id-back-role">Vidatra Student Council</span>
+                <span class="id-shine"></span>
+              </div>
+            </div>
+            <span class="id-clip"></span>
+          </div>
+        </div>
+        <p class="card-caption"><strong>VISCO</strong><span>Vidatra Student Council</span></p>
+        <div class="card-tools">
+          <button class="text-button" id="flip-card" type="button" aria-pressed="false">Balik kartu</button>
+          <span>Tarik kartu atau tekan tombol.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="aspiration-section" id="kotak" aria-labelledby="kotak-title">
+      <div class="aspiration-inner">
+        <div class="section-copy">
+          <p class="section-label">Kotak aspirasi</p>
+          <h2 id="kotak-title">Tulis surat, lalu masukkan ke kotak.</h2>
+          <p>Setiap surat tercatat dengan tanggal masuk. Pengurus bisa menandai surat yang sudah dibaca dan yang sudah ditindaklanjuti.</p>
+          <ul class="principles">
+            <li><strong>Bisa anonim.</strong> Nama dan kelas tidak wajib diisi.</li>
+            <li><strong>Hanya pengurus.</strong> Isi surat tidak tampil di halaman publik.</li>
+            <li><strong>Bisa ditindaklanjuti.</strong> Pengurus melihat status setiap surat di kotak masuk.</li>
+          </ul>
+          <p class="privacy-note">Jangan tulis data sensitif seperti nomor telepon, alamat rumah, atau kata sandi.</p>
+        </div>
+
+        <div class="aspiration-workspace">
+          <div class="box-wrap">
+            <div class="box-stage" id="box-stage" aria-hidden="true">
+              <div class="box" id="box">
+                <div class="box-face box-front">
+                  <span class="box-label">Kotak aspirasi</span>
+                  <span class="box-mark">Visco Vidatra</span>
+                  <span class="box-slit"></span>
+                </div>
+                <div class="box-face box-back"></div>
+                <div class="box-face box-left"></div>
+                <div class="box-face box-right"></div>
+                <div class="box-face box-top">
+                  <span class="box-slot"></span>
+                </div>
+                <div class="box-face box-bottom"></div>
+              </div>
+            </div>
+            <p class="box-caption">Surat akan masuk ke kotak setelah dikirim.</p>
+          </div>
+
+          <div class="letter-panel">
+            <form id="aspiration-form" novalidate>
+              <div class="form-head">
+                <h3>Tulis surat</h3>
+                <p>Kolom bertanda wajib harus diisi.</p>
+              </div>
+
+              <div class="field-row">
+                <div class="field">
+                  <label for="name">Nama <span class="optional">opsional</span></label>
+                  <input id="name" name="name" type="text" maxlength="60" autocomplete="name" placeholder="Nama atau inisial">
+                </div>
+                <div class="field">
+                  <label for="className">Kelas <span class="optional">opsional</span></label>
+                  <input id="className" name="className" type="text" maxlength="60" autocomplete="off" placeholder="Kelas">
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="message">Isi aspirasi <span class="required-mark">wajib</span></label>
+                <textarea id="message" name="message" rows="7" maxlength="2000" minlength="10" required aria-describedby="message-help message-error" placeholder="Tulis situasi, usulan, atau hal yang perlu diperbaiki."></textarea>
+                <div class="field-foot">
+                  <p id="message-help" class="field-help">Minimal 10 karakter. Tulis dengan jelas agar mudah ditindaklanjuti.</p>
+                  <span class="char-count"><span id="char-count">0</span>/2000</span>
+                </div>
+                <p id="message-error" class="field-error" hidden></p>
+              </div>
+
+              <label class="check-row" for="anonymous">
+                <input type="checkbox" id="anonymous" name="anonymous">
+                <span>Kirim sebagai anonim</span>
+              </label>
+
+              <p class="form-note">Tidak perlu login. Dengan mengirim, surat masuk ke kotak pengurus. Nama dan kelas tidak ditampilkan di halaman publik.</p>
+              <button class="button button-primary form-submit" id="submit-button" type="submit">Masukkan ke kotak</button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p><strong>Visco Vidatra</strong><br>Ruang aspirasi siswa.</p>
+      <nav aria-label="Navigasi footer">
+        <a href="#kotak">Kotak aspirasi</a>
+        <a href="/masuk">Masuk pengurus</a>
+      </nav>
+      <p class="footer-note">VISCO, Vidatra Student Council. 2026/2027.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/card.js?v=20261119b"></script>
+  <script type="module" src="/js/aspiration.js?v=20261119b"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kotak masuk aspirasi, Visco Vidatra</title>
+  <meta name="description" content="Kotak masuk pengurus Visco Vidatra untuk membaca dan menindaklanjuti aspirasi siswa.">
+  <meta name="theme-color" content="#0b0a09">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/assets/portrait.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/base.css?v=20261119b">
+  <link rel="stylesheet" href="/css/dashboard.css?v=20261119b">
+</head>
+<body class="dashboard-page">
+  <a class="skip-link" href="#main">Lewati ke konten</a>
+
+  <header class="dash-header">
+    <a class="brand" href="/" aria-label="Visco Vidatra, beranda">
+      <img src="/assets/portrait.png" alt="" width="44" height="44">
+      <span>Visco Vidatra</span>
+    </a>
+    <div class="dash-header-actions">
+      <a class="button button-quiet button-small" href="/">Lihat situs</a>
+      <button class="button button-quiet button-small" id="logout-button" type="button">Keluar</button>
+    </div>
+  </header>
+
+  <main class="dash-main" id="main">
+    <section class="dash-intro" aria-labelledby="dash-title">
+      <div class="dash-intro-copy">
+        <p class="section-label">Kotak masuk</p>
+        <h1 id="dash-title">Surat dari siswa.</h1>
+        <p class="dash-lead">Baca, tandai, dan tindak lanjuti. Surat terbaru muncul paling atas.</p>
+      </div>
+      <dl class="dash-counts" aria-label="Ringkasan surat">
+        <div>
+          <dt>Total</dt>
+          <dd id="count-total">0</dd>
+        </div>
+        <div>
+          <dt>Baru</dt>
+          <dd id="count-baru">0</dd>
+        </div>
+        <div>
+          <dt>Dibaca</dt>
+          <dd id="count-dibaca">0</dd>
+        </div>
+        <div>
+          <dt>Selesai</dt>
+          <dd id="count-selesai">0</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="dash-workspace" aria-labelledby="list-title">
+      <h2 class="sr-only" id="list-title">Daftar surat</h2>
+
+      <div class="dash-toolbar">
+        <div class="filter-group" role="group" aria-label="Filter status surat">
+          <button class="filter-button" type="button" data-filter="semua" aria-pressed="true">Semua</button>
+          <button class="filter-button" type="button" data-filter="baru" aria-pressed="false">Baru</button>
+          <button class="filter-button" type="button" data-filter="dibaca" aria-pressed="false">Dibaca</button>
+          <button class="filter-button" type="button" data-filter="selesai" aria-pressed="false">Selesai</button>
+        </div>
+        <div class="field search-field">
+          <label for="search">Cari surat</label>
+          <input id="search" type="search" placeholder="Cari isi, nama, atau kelas" autocomplete="off" aria-controls="letter-list">
+        </div>
+      </div>
+
+      <p class="dash-status" id="dash-status" role="status" aria-live="polite"></p>
+      <div class="dash-state" id="dash-state" hidden></div>
+      <div class="letter-list" id="letter-list" aria-busy="false"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer--compact">
+    <div class="footer-inner">
+      <p><strong>Visco Vidatra</strong><br>Kotak masuk pengurus.</p>
+      <p class="footer-note">VISCO, Vidatra Student Council. 2026/2027.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/dashboard.js?v=20261119b"></script>
+</body>
+</html>
